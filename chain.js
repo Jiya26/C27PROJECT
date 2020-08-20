@@ -6,6 +6,7 @@ class Chain{
             length:100,
             stiffness:0.5
         }
+        this.chain=Constraint.create(options)
         World.add (world,this.chain)
     }
     display(){
