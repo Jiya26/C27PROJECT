@@ -2,6 +2,7 @@
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
+const Constraint =Matter.Constraint;
 const Body = Matter.Body;
 var ball1,ball2,ball3,ball4,ball5;
 var roof;
@@ -26,8 +27,8 @@ function setup() {
 	ball3 = new Ball(160,600);
 	ball4 = new Ball(190,600);
 	ball5 =new Ball(220,600);
+	roof = new Roof(160,400,200,20);
 	chain = new Chain(ball1,roof);
-	roof = createSprite(160,400,200,20)
 	Engine.run(engine);
   
 }
