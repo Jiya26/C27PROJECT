@@ -43,6 +43,7 @@ function draw() {
   ball4.display();
   ball5.display();
   chain.display();
+  roof.display();
   drawSprites();
  
 }
