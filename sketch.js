@@ -28,7 +28,7 @@ function setup() {
 	ball4 = new Ball(190,600);
 	ball5 =new Ball(220,600);
 	roof = new Roof(160,400,200,20);
-	chain = new Chain(ball1,roof);
+	chain - chain = new Chain(ball1.body,roof.body);
 	Engine.run(engine);
   
 }
