@@ -6,7 +6,7 @@ const Constraint =Matter.Constraint;
 const Body = Matter.Body;
 var ball1,ball2,ball3,ball4,ball5;
 var roof;
-var chain;
+var chain1,chain2,chain3,chain4,chain5;
 
 function preload()
 {
@@ -22,13 +22,17 @@ function setup() {
 
 	//Create the Bodies Here.
     
-	ball1 = new Ball(100,600);
-	ball2 =new Ball(130,600);
-	ball3 = new Ball(160,600);
-	ball4 = new Ball(190,600);
-	ball5 =new Ball(220,600);
+	ball1 = new Ball(200,700);
+	ball2 =new Ball(230,600);
+	ball3 = new Ball(260,600);
+	ball4 = new Ball(290,600);
+	ball5 =new Ball(320,600);
 	roof = new Roof(160,400,200,20);
-	chain - chain = new Chain(ball1.body,roof.body);
+	chain1 = new Chain(ball1.body,roof.body);
+	chain2 = new Chain(ball2.body,roof.body);
+	chain3 = new Chain(ball3.body,roof.body);
+	chain4 = new Chain(ball4.body,roof.body);
+	chain5 = new Chain(ball5.body,roof.body);				
 	Engine.run(engine);
   
 }
@@ -42,7 +46,11 @@ function draw() {
   ball3.display();
   ball4.display();
   ball5.display();
-  chain.display();
+  chain1.display();
+  chain2.display();
+  chain3.display();
+  chain4.display();
+  chain5.display();
   roof.display();
   drawSprites();
  
