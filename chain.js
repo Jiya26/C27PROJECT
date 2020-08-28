@@ -6,7 +6,7 @@ class Chain{
             bodyA:bodyA,
             bodyB:bodyB,
             stiffness:0.5,
-            pointB:{x:this.offsetX,y:this.offsetY}
+            pointB:{x:offsetX,y:offsetY}
         }
         this.chain=Constraint.create(options)
         World.add (world,this.chain)
@@ -22,7 +22,8 @@ class Chain{
 
         var Anchor2X = pointB.x+this.offsetX
         var Anchor2Y = pointB.y+this.offsetY
-        line(pointA.x,pointA.y,pointB.x,pointB.y)
+        stroke("white")
+        line(Anchor1X,Anchor1Y,Anchor2X,Anchor2Y)
         pop()
     }
 }
