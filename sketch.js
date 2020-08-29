@@ -21,20 +21,20 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-    
+ 
 	ball1 = new Ball(200,600);
-	ball2 =new Ball(230,600);
-	ball3 = new Ball(260,600);
-	ball4 = new Ball(290,600);
-	ball5 =new Ball(320,600);
-	roof = new Roof(200,400,200,20);
-	chain1 = new Chain(ball1.body,roof.body,-90,0);
-	chain2 = new Chain(ball2.body,roof.body,-50,0);
-	chain3 = new Chain(ball3.body,roof.body,0,0);
-	chain4 = new Chain(ball4.body,roof.body,50,0);
-	chain5 = new Chain(ball5.body,roof.body,98,0);				
+	ball2 =new Ball(240,600);
+    ball3 = new Ball(280,600);
+    ball4 = new Ball(320,600);
+	ball5 =new Ball(360,600);
+    roof = new Roof(240,400,200,20);
+	chain1 = new Chain(ball1.body,roof.body,-80,0);
+	chain2 = new Chain(ball2.body,roof.body,-40,0);
+	chain3 = new Chain(ball3.body,roof.body,0,0); 
+	chain4 = new Chain(ball4.body,roof.body,40,0);
+	chain5 = new Chain(ball5.body,roof.body,80,0);
+
 	Engine.run(engine);
-  
 }
 
 
