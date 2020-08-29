@@ -2,38 +2,37 @@
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
+const Constraint =Matter.Constraint;
 const Body = Matter.Body;
-var boy,boyImg;
-var tree,treeImg;
-var stone,stoneImg;
-var chain;
+var ball1,ball2,ball3,ball4,ball5;
+var roof;
+var chain1,chain2,chain3,chain4,chain5;
 
 function preload()
 {
-   boyImg = loadImage("img/Plucking mangoes/boy.png");
-   treeImg = loadImage("img/Plucking mangoes/tree.png");
+	
 }
 
 function setup() {
-	createCanvas(900, 800);
+	createCanvas(800, 800);
 
 
 	engine = Engine.create();
 	world = engine.world;
 
 	//Create the Bodies Here.
-	boy=createSprite(150,600,20,20);
-	boy.addImage("boy",boyImg);
-	boy.scale = 0.1;
-
-	tree = createSprite(600,400,20,20);
-	tree.addImage("tree",treeImg);
-	tree.scale = 0.5;
-
-	stone = new StoneClass(100,100,10,10);
-	stone.scale = 0.5;
-	
-	chain= new Chain(boy,tree,150,0)
+    
+	ball1 = new Ball(200,600);
+	ball2 =new Ball(230,600);
+	ball3 = new Ball(260,600);
+	ball4 = new Ball(290,600);
+	ball5 =new Ball(320,600);
+	roof = new Roof(200,400,200,20);
+	chain1 = new Chain(ball1.body,roof.body,-90,0);
+	chain2 = new Chain(ball2.body,roof.body,-50,0);
+	chain3 = new Chain(ball3.body,roof.body,0,0);
+	chain4 = new Chain(ball4.body,roof.body,50,0);
+	chain5 = new Chain(ball5.body,roof.body,98,0);				
 	Engine.run(engine);
   
 }
@@ -42,9 +41,17 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(0);
-  boy.display();
-  stone.display();
-  chain.display();
+  chain1.display();
+  chain2.display();
+  chain3.display();
+  chain4.display();
+  chain5.display();
+  ball1.display();
+  ball2.display();
+  ball3.display();
+  ball4.display();
+  ball5.display();
+  roof.display();
   drawSprites();
  
 }
