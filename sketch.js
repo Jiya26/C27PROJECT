@@ -56,8 +56,8 @@ function draw() {
  
 }
 function keyPressed() {
-  if (keyCode === DOWN_ARROW) {
-     Matter.Body.setStatic(ball1,false)
+  if (keyCode === UP_ARROW) {
+     Matter.Body.applyForce(ball1,false)
    }
  }
 
